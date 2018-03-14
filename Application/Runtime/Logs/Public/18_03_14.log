@@ -1,0 +1,219 @@
+[ 2018-03-14T10:03:54+08:00 ] 127.0.0.1 /Public/Admin/Images/ecshop_logo.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+
+[ 2018-03-14T10:03:54+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:03:54+08:00 ] 127.0.0.1 /Public/Admin/Styles/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:03:54+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001470s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:56+08:00 ] 127.0.0.1 /Public/Admin/Images/ecshop_logo.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+
+[ 2018-03-14T10:06:56+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001052s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:56+08:00 ] 127.0.0.1 /Public/Admin/Styles/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:56+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:57+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:57+08:00 ] 127.0.0.1 /Public/Admin/Styles/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:57+08:00 ] 127.0.0.1 /Public/Admin/Images/ecshop_logo.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+
+[ 2018-03-14T10:06:57+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:57+08:00 ] 127.0.0.1 /Public/Admin/Images/ecshop_logo.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+
+[ 2018-03-14T10:06:57+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:57+08:00 ] 127.0.0.1 /Public/Admin/Styles/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:57+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:58+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:58+08:00 ] 127.0.0.1 /Public/Admin/Styles/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000880s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:58+08:00 ] 127.0.0.1 /Public/Admin/Images/ecshop_logo.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+
+[ 2018-03-14T10:06:58+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:58+08:00 ] 127.0.0.1 /Public/Admin/Images/ecshop_logo.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000911s ]
+
+[ 2018-03-14T10:06:58+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:58+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:06:58+08:00 ] 127.0.0.1 /Public/Admin/Styles/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:09:39+08:00 ] 127.0.0.1 /Public/Admin/Styles/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:09:39+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001257s ]
+ERR: 无法加载控制器:Admin
+
+[ 2018-03-14T10:09:39+08:00 ] 127.0.0.1 /Public/Admin/Styles/general.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+ERR: 无法加载控制器:Admin
+
