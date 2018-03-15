@@ -18,46 +18,47 @@
 
 
 <div class="main-div">
-    <form method="post" action="__GROUP__/Brand/brandAdd"enctype="multipart/form-data" >
+    <form method="post" action="/index.php/Admin/Brand/edit/id/16.html"enctype="multipart/form-data" >
         <table cellspacing="1" cellpadding="3" width="100%">
+            <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
             <tr>
                 <td class="label">品牌名称</td>
                 <td>
-                    <input type="text" name="brand_name" maxlength="60" value="" />
+                    <input type="text" name="name" maxlength="60" value="<?php echo $data['name'] ?>" />
                     <span class="require-field">*</span>
                 </td>
             </tr>
             <tr>
                 <td class="label">品牌LOGO</td>
                 <td>
-                    <input type="file" name="brand_logo" id="logo" size="45" ><br/>
+                    <input type="file" name="logo_src" id="logo" size="45" ><br/>
                     <span class="notice-span" style="display:block"  id="warn_brandlogo">请上传图片，做为品牌的LOGO！</span>
                 </td>
             </tr>
             <tr>
                 <td class="label">品牌大图</td>
                 <td>
-                    <input type="file" name="brand_logo" id="logo" size="45" ><br/>
+                    <input type="file" name="img_src" id="img" size="45" ><br/>
                     <span class="notice-span" style="display:block"  id="warn_brandlogo">请上传图片，做为品牌的首页图！</span>
                 </td>
             </tr>
             <tr>
                 <td class="label">品牌描述</td>
                 <td>
-                    <textarea  name="brand_desc" cols="60" rows="4"  ></textarea>
+                    <textarea  name="desc" cols="60" rows="8" ><?php echo $data['desc'] ?></textarea>
                 </td>
             </tr>
             <tr>
                 <td class="label">排序</td>
                 <td>
-                    <input type="text" name="sort_order" maxlength="40" size="15" value="100" />
+                    <input type="text" name="order_id" maxlength="40" size="15" value="<?php echo $data['order_id'] ?>" />
                 </td>
             </tr>
             <tr>
                 <td class="label">是否显示</td>
                 <td>
-                    <input type="radio" name="is_show" value="1"  /> 是
-                    <input type="radio" name="is_show" value="0" checked="checked" /> 否
+                    <input type="radio" name="is_index" value="1" <?php echo ($data['is_index'] == 1)? "checked='checked'":"" ?> /> 是
+                    <input type="radio" name="is_index" value="0" <?php echo ($data['is_index'] == 0)? "checked='checked'":"" ?> /> 否
                 </td>
             </tr>
             <tr>
@@ -72,7 +73,6 @@
 
 
 <div id="footer">
-共执行 9 个查询，用时 0.025161 秒，Gzip 已禁用，内存占用 3.258 MB<br />
-版权所有 &copy; 2005-2012 宁波几和网络科技有限公司，并保留所有权利。</div>
+版权所有 &copy; 2018 宁波几和网络科技有限公司，并保留所有权利。</div>
 </body>
 </html>
