@@ -1,0 +1,15 @@
+
+<view class='brand-list-box'>
+<block wx:for="{{brandData}}" >
+  <view class='alphabet'>{{item.al}}</view>
+    <block wx:for="{{item.brand}}" >
+    <navigator url="./brandDetail/br_detail?brandId={{item.id}}" hover-class="navigator-hover">
+    <view class='brand-list'>
+      <image src="{{item.logo_src}}" />
+      <view class='brand-name'>{{item.name}}</view>
+    </view>
+    </navigator>
+    <view class='rule'></view>
+    </block>
+</block>
+</view>

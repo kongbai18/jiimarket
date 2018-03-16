@@ -5623,3 +5623,16 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000867s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000990s ]
 
+[ 2018-03-15T17:53:36+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/brandDetail/brandId/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000985s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001606s ]
+SQL: SHOW COLUMNS FROM `jii_brand` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jii_brand` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001092s ]
+

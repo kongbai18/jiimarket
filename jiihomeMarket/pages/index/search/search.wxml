@@ -1,0 +1,55 @@
+<view id="search">
+     <image src="/image/search.png" id='search-img'></image>
+     <input id='search-text'></input>
+     <navigator url="/pages/index/index" open-type="switchTab" hover-class="navigator-hover">
+     <view id='cancel'>取消</view>
+     </navigator>
+</view>
+
+<view id='history'>
+   <view id='top'>
+      <view id='top-left'>历史搜索</view>
+      <image src='/image/empty.png' id='top-right'></image>
+   </view>
+   <view id='history-list'>
+     <view class='content'>尖叫设计</view>
+     <view class='content'>尖叫</view>
+     <view class='content'>尖叫设计asdasd</view>
+     <view class='content'>尖叫</view>
+     <view class='content'>尖叫设计</view>
+     <view class='content'>尖叫设计</view>
+   </view>
+</view>
+
+<view id='product-list'>
+    <view class='product'>
+      <view class='product-img'><image src="http://static.jiihome.com/views/goods_color/pic/2018-02-02/196502.png?" /></view>
+      <view class='produc-name'>小伙伴系统大汤碗。。。。。</view>
+      <view class='product-price'>￥39.00</view>
+      <view class='product-score'></view>
+    </view>
+    <view class='product'>
+      <view class='product-img'><image src="http://static.jiihome.com/views/goods_color/pic/2018-02-02/196502.png?" /></view>
+      <view class='produc-name'>小伙伴系统大汤碗。。。。。</view>
+      <view class='product-price'>￥39.00</view>
+      <view class='product-score'></view>
+    </view>
+    <view class='product'>
+      <view class='product-img'><image src="http://static.jiihome.com/views/goods_color/pic/2018-02-02/196502.png?" /></view>
+      <view class='produc-name'>小伙伴系统大汤碗。。。。。</view>
+      <view class='product-price'>￥39.00</view>
+      <view class='product-score'></view>
+    </view>
+    <view class='product'>
+      <view class='product-img'><image src="http://static.jiihome.com/views/goods_color/pic/2018-02-02/196502.png?" /></view>
+      <view class='produc-name'>小伙伴系统大汤碗。。。。。</view>
+      <view class='product-price'>￥39.00</view>
+      <view class='product-score'></view>
+    </view>
+    <view class='product'>
+      <view class='product-img'><image src="http://static.jiihome.com/views/goods_color/pic/2018-02-02/196502.png?" /></view>
+      <view class='produc-name'>小伙伴系统大汤碗。。。。。</view>
+      <view class='product-price'>￥39.00</view>
+      <view class='product-score'></view>
+    </view>
+  </view>

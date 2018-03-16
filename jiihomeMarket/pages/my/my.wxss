@@ -1,0 +1,76 @@
+#box{
+  background: #f3f3f3;
+}
+#top{
+  height: 360rpx;
+  width: 100%;
+  background: #ffc700;
+  overflow: hidden;
+}
+#head-img{
+  width: 176rpx;
+  height: 176rpx;
+  border-radius: 88rpx;
+  margin: 52rpx 287rpx 0;
+  background-size: cover;
+}
+#user-name{
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 44rpx;
+}
+#order{
+  background: white;
+  margin-top: 22rpx;
+}
+#my{
+  padding: 46rpx 32rpx;
+  height: 20rpx;
+}
+#status-box{
+  height: 172rpx;
+  overflow: hidden;
+}
+.status{
+  float: left;
+  width: 80rpx;
+  margin: 30rpx 0 15rpx 88rpx;
+}
+.status-img{
+  width: 80rpx;
+  height: 80rpx;
+}
+.status-img image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.status-name{
+  font-size: 24rpx;
+  text-align: center;
+  color: gray;
+  overflow: hidden;
+}
+#info-box{
+  background: white;
+  margin: 22rpx 0;
+}
+.info{
+  width: 100%;
+  height: 90rpx;
+  font-size: 34rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+.info image{
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+  margin:10rpx 22rpx 0 22rpx;
+}
+.info text{
+  float: left;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.about{
+  background: white;
+}

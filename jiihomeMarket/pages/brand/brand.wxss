@@ -1,0 +1,31 @@
+.brand-list-box{
+  overflow: hidden;
+}
+.alphabet{
+  width: 750rpx;
+  height: 52rpx;
+  background: #f3f3f3;
+  padding-left: 32rpx;
+  font-size: 40rpx;
+  border-bottom: 2rpx solid white;
+}
+.brand-list{
+  width: 750rpx;
+  height: 140rpx;
+}
+.brand-list image{
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 30rpx 32rpx;
+}
+.brand-name{
+  float: left;
+  line-height: 140rpx;
+  font-size: 34rpx;
+}
+.rule{
+  width: 686rpx;
+  border-top: 2rpx solid #f3f3f3;
+  margin: 0 auto;
+}

@@ -1,0 +1,17 @@
+.cate-box1{
+  width:750rpx;
+  height: 266rpx;
+  margin-top: 24rpx;
+}
+.cate-box2-normal{
+ display: none;
+}
+.cate{
+  box-sizing: border-box;
+  height: 90rpx;
+  width: 750rpx;
+  line-height: 90rpx;
+  font-size: 34rpx;
+  padding-left: 32rpx;
+  border-bottom: 1rpx solid #CCCCCC;
+}

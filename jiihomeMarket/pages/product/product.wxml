@@ -1,0 +1,84 @@
+<view class='box'>  
+   <view class='swiper'>
+     <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" style='height:550rpx' >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+    </swiper> 
+   </view>
+   
+   <view class='name-box'>
+     <view id="name">HUNT椅 经典椅</view>
+     <view id="price">￥888</view>
+   </view>
+
+   <view class='info-box'>
+    <view id="info">单品信息</view>
+    <view id='tag-box'>
+     <text class='tag'>欧标</text>
+     <text class='tag'>欧标</text>
+     <text class='tag'>欧标</text>
+    </view>
+    <view class='attr'><text style='color:gray'>规格：</text>75cmx48cm</view>
+    <view class='attr'><text style='color:gray'>材质：</text>金属 皮革</view>
+    <view class='attr'><text style='color:gray'>品类：</text>椅子</view>
+    <view class='attr'><text style='color:gray'>品牌：</text>IKEA</view>
+  </view>
+  <view id="introduc"></view>
+  <view id="question">常见问题<text style='float:right;padding-right:50rpx;color:gray;'>></text></view>
+  
+  <view id="{{addCart ? 'choose-box-show' :'choose-box'}}">
+     <view id="goods">
+        <view id='goods-img'><image src='/image/search.png' /></view>
+        <view id='goods-name'>
+           <view id='name'>Bruk 系列冷水杯</view>
+           <view id='price'>￥88.00</view>
+        </view>
+        <view id='close' bindtap="closeCart">
+           <image src='/image/close.png' style='width:40rpx;height:40rpx;' />
+        </view>
+     </view>
+     <form>
+     <view class='attr-box'>
+        <view class='attr-name'>容量</view>
+        <view class='attr-val'>
+           <radio value="350ml" checked=""/>
+           <text value='350ml' >350ml</text>
+           <radio value="350ml" checked=""/>
+           <text value='350ml' >350ml</text>
+           <radio value="350ml" checked=""/>
+           <text value='350ml' >350ml</text>
+        </view>
+     </view>
+     <view class='attr-box'>
+        <view class='attr-name'>容量</view>
+        <view class='attr-val'>
+           <radio value="350ml" checked=""/>
+           <text value='350ml' >350ml</text>
+           <radio value="350ml" checked=""/>
+           <text value='350ml' >350ml</text>
+           <radio value="350ml" checked=""/>
+           <text value='350ml' >350ml</text>
+           <radio value="350ml" checked=""/>
+           <text value='350ml' >350ml</text>
+           <radio value="350ml" checked=""/>
+           <text value='350ml' >350ml</text>
+        </view>
+     </view>
+     <view id='submit'>
+     <button formType="submit">确定</button>
+     </view>
+     </form>
+  </view>
+
+  <view id="bottom">
+    <navigator url="/pages/index/index" open-type="switchTab" hover-class="navigator-hover">
+    <view id="home"><image src='/image/home.png' style='width:80rpx;height:80rpx;padding:10rpx;' /></view>
+    </navigator>
+    <view id="service"><image src='/image/service.png' style='width:80rpx;height:80rpx;padding:10rpx;' /></view>
+    <view id="cart" bindtap="addCart">加入购物车</view>
+  </view>
+</view>

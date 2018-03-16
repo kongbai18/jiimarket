@@ -101,3 +101,20 @@
         if ($asc >= -11055 && $asc <= -10247) return 'Z';
         return '';
     }
+    //制作下拉框
+    function buildSelect($mdName,$selName,$val,$valName,$selelctVal = '',$firstName = '请选择...'){
+        $model = D($mdName);
+        $data = $model->field($val.','.$valName)->select();
+        $select = '<select name="'.$selName.'"><option value="">'.$firstName.'</option>';
+        foreach($data as $k => $v){
+            //判断是否有默认选择
+            if($selelctVal && $selelctVal==$v[$val]){
+                $selected = 'selected="selected"';
+            }else{
+                $selected = '';
+            }
+            $select .= '<option '.$selected.' value="'.$v[$val].'">'.$v[$valName].'</option>';
+        }
+        $select .= '</select>';
+        echo $select;
+    }

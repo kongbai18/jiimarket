@@ -1,0 +1,93 @@
+.box{
+  background: #f3f3f3;
+  overflow: hidden;
+}
+#brand-icon{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+  margin: 32rpx 295rpx;
+  background-size: cover;
+}
+#brand-name{
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 32rpx;
+  text-align: center;
+  font-size: 44rpx;
+}
+.part{
+  height: 128rpx;
+  font-size: 30rpx;
+  padding: 0 32rpx;
+  color: gray;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+}
+.all{
+  font-size: 30rpx;
+  padding: 0 32rpx;
+  color: gray;
+  overflow: hidden;
+}
+.brief{
+  height: 60rpx;
+  font-size: 50rpx;
+  line-height: 60rpx;
+  color: gray;
+  text-align: center;
+}
+.less{
+  display: none;
+}
+.product{
+  float: left;
+  box-sizing: border-box;
+  width:375rpx;
+  border: 0.5rpx solid #EEEEEE;
+  padding-bottom: 20rpx;
+}
+
+.product-img{
+  box-sizing: border-box;
+  width: 374rpx;
+  height: 374rpx;
+  padding: 20rpx;
+  
+}
+.product-img image{
+  width: 334rpx;
+  height: 334rpx;
+}
+.produc-name{
+  height: 40rpx;
+  width: 360rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: gray;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+}
+.product-price{
+  height: 40rpx;
+  width: 360rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.product-score{
+  height: 40rpx;
+  width: 320rpx;
+  background: yellow;
+  margin:0rpx auto;
+
+}

@@ -1,0 +1,5 @@
+<view id='box'>
+  <image class='coupon'></image>
+  <image class='coupon'></image>
+  <image class='coupon'></image>
+</view>

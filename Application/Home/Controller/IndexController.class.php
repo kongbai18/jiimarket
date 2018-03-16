@@ -14,4 +14,8 @@ class IndexController extends Controller {
         $brandModel = D('Admin/Brand');
         echo json_encode($brandModel->brandDetail($id));
     }
+    public function getCate(){
+        $cateModel = D('Admin/Category');
+        echo json_encode($cateModel->getCate());
+    }
 }

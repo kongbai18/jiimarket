@@ -1,0 +1,134 @@
+#box{
+  background: #f3f3f3;
+  overflow: hidden;
+}
+.goods-box{
+  height: 360rpx;
+  width: 750rpx;
+  background: white;
+  margin:10rpx 0;
+}
+.top{
+  width: 750rpx;
+  height: 100rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+  overflow: hidden;
+}
+.select{
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  margin:32rpx 29rpx;
+  border-radius: 21rpx;
+  border:1rpx solid #ccc;
+}
+
+
+.prev{
+  float: right;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  font-size: 55rpx;
+  line-height: 60rpx;
+  margin:20rpx 32rpx 20rpx 20rpx;
+  background: #f3f3f3;
+}
+.num{
+  float: right;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  margin:26rpx 0; 
+}
+.next{
+  float: right;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  font-size: 55rpx;
+  line-height: 60rpx;
+  margin:20rpx 32rpx 20rpx 20rpx;
+  background: #f3f3f3;
+}
+.goods-img{
+  float: left;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 42rpx;
+}
+.info-box{
+  width: 505rpx;
+  float: left;
+}
+.goods-name{
+  margin-top: 42rpx;
+  font-size: 38rpx;
+}
+.attr{
+  height: 46rpx;
+  font-size: 30rpx;
+  color: gray;
+  padding: 5rpx 10rpx;
+  background: #f3f3f3;
+  margin-right: 15rpx;
+}
+.price{
+  float: right;
+  margin-right: 40rpx;
+  color: red;
+  font-size: 34rpx;
+}
+#bottom{
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  border-top: 1rpx solid #f3f3f3;
+  bottom: 0;
+}
+#choose{
+  float: left;
+  height: 100rpx;
+  width: 200rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-right: 1rpx solid #f3f3f3;
+  background: white;
+}
+.choose-all{
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  margin:32rpx 0 32rpx 32rpx;
+  border-radius: 21rpx;
+  border:1rpx solid #ccc;
+}
+#choose text{
+  float: left;
+  padding:3rpx 15rpx;
+}
+#total{
+  float: left;
+  height: 100rpx;
+  width: 320rpx;
+  padding-left: 30rpx; 
+  font-size: 35rpx;
+  color: red;
+  line-height: 100rpx;
+  border-right: 1rpx solid #f3f3f3;
+  background: white;
+}
+#balance{
+  float: left;
+  height: 100rpx;
+  width: 195rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 38rpx;
+  background: #ffc700;
+}
+#comp{
+  height: 100rpx;
+  background: white;
+}
