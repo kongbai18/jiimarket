@@ -20,6 +20,8 @@ class BrandController extends Controller {
         $model = D('brand');
         //判断是否接收了表单
         if(IS_POST){
+            var_dump($_POST);
+            var_dump($_FILES);die;
             //判断数据是否验证成功
             if($model->create(I('post.'),1)){
                 //判断数据是否添加成功

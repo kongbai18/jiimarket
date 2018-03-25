@@ -18,7 +18,7 @@
 
 
 <div class="main-div">
-    <form method="post" action="/index.php/Admin/Brand/add.html"enctype="multipart/form-data" >
+    <form method="post" action="/index.php/admin/brand/add"enctype="multipart/form-data" >
         <table cellspacing="1" cellpadding="3" width="100%">
             <tr>
                 <td class="label">品牌名称</td>

@@ -1,0 +1,123 @@
+[ 2018-03-20T11:00:43+08:00 ] 127.0.0.1 /index.php/home/index/goodsSearch/keyword/ren
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+
+[ 2018-03-20T11:01:04+08:00 ] 127.0.0.1 /index.php/home/index/goodsSearch/keyword/ren
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001354s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jii_goods` WHERE `goods_name` LIKE '%ren%' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.name as brand_name,c.name as cat_name FROM jii_goods a LEFT JOIN jii_brand b ON a.brand_id=b.id
+		        LEFT JOIN jii_category c ON a.cat_id=c.id  WHERE `goods_name` LIKE '%ren%' ORDER BY order_id asc LIMIT 0,100   [ RunTime:0.0055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001097s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001300s ]
+
+[ 2018-03-20T11:01:26+08:00 ] 127.0.0.1 /index.php/home/index/goodsSearch/keyword/ren
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jii_goods` WHERE `goods_name` LIKE '%ren%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT a.*,b.name as brand_name,c.name as cat_name FROM jii_goods a LEFT JOIN jii_brand b ON a.brand_id=b.id
+		        LEFT JOIN jii_category c ON a.cat_id=c.id  WHERE `goods_name` LIKE '%ren%' ORDER BY order_id asc LIMIT 0,100   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000884s ]
+
+[ 2018-03-20T11:01:32+08:00 ] 127.0.0.1 /index.php/home/index/goodsSearch/keyword/ren
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jii_goods` WHERE `goods_name` LIKE '%ren%' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.name as brand_name,c.name as cat_name FROM jii_goods a LEFT JOIN jii_brand b ON a.brand_id=b.id
+		        LEFT JOIN jii_category c ON a.cat_id=c.id  WHERE `goods_name` LIKE '%ren%' ORDER BY order_id asc LIMIT 0,100   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2018-03-20T11:02:30+08:00 ] 127.0.0.1 /index.php/home/index/goodsSearch/keyword/ren
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+
+[ 2018-03-20T11:02:41+08:00 ] 127.0.0.1 /index.php/home/index/goodsSearch/keyword/ren
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jii_goods` WHERE `goods_name` LIKE '%ren%' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.name as brand_name,c.name as cat_name FROM jii_goods a LEFT JOIN jii_brand b ON a.brand_id=b.id
+		        LEFT JOIN jii_category c ON a.cat_id=c.id  WHERE `goods_name` LIKE '%ren%' ORDER BY order_id asc LIMIT 0,100   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000995s ]
+
+[ 2018-03-20T11:08:50+08:00 ] 127.0.0.1 /index.php/home/index/goodsSearch/keyword/e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jii_goods` WHERE `goods_name` LIKE '%e%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT a.*,b.name as brand_name,c.name as cat_name FROM jii_goods a LEFT JOIN jii_brand b ON a.brand_id=b.id
+		        LEFT JOIN jii_category c ON a.cat_id=c.id  WHERE `goods_name` LIKE '%e%' ORDER BY order_id asc LIMIT 0,100   [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2018-03-20T11:13:07+08:00 ] 127.0.0.1 /index.php/home/index/goodsSearch/keyword/e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jii_goods_img` [ RunTime:0.0004s ]
+SQL: SELECT min(id) as id FROM `jii_goods_img` GROUP BY goods_id  [ RunTime:0.0036s ]
+NOTIC: [8] Undefined variable: order D:\wamp\wamp64\www\jiiMarket\Application\Admin\Model\GoodsModel.class.php 第 368 行.
+SQL: SELECT a.id,a.goods_name,a.shop_price,a.brand_id,b.img_src FROM jii_goods a LEFT JOIN jii_goods_img b ON b.goods_id=a.id  WHERE `goods_name` LIKE '%e%' AND `is_on_sale` = 1 AND b.id IN ('5','6','7','4','1','8','9','10','11','12','13','14','15','16')  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001768s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002079s ]
+
+[ 2018-03-20T11:14:03+08:00 ] 127.0.0.1 /index.php/home/index/goodsSearch/keyword/dfh
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `jii_goods_img` [ RunTime:0.0011s ]
+SQL: SELECT min(id) as id FROM `jii_goods_img` GROUP BY goods_id  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: order D:\wamp\wamp64\www\jiiMarket\Application\Admin\Model\GoodsModel.class.php 第 368 行.
+SQL: SELECT a.id,a.goods_name,a.shop_price,a.brand_id,b.img_src FROM jii_goods a LEFT JOIN jii_goods_img b ON b.goods_id=a.id  WHERE `goods_name` LIKE '%dfh%' AND `is_on_sale` = 1 AND b.id IN ('5','6','7','4','1','8','9','10','11','12','13','14','15','16')  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000967s ]
+

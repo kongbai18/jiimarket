@@ -126,7 +126,7 @@ body {
             <li class="explode" key="02_cat_and_goods" name="menu">
             商品管理
                 <ul>
-                    <li class="menu-item"><a href="goodsList.html" target="main-frame">商品列表</a></li>
+                    <li class="menu-item"><a href="<?php echo U('Goods/lst') ?>" target="main-frame">商品列表</a></li>
                     <li class="menu-item"><a href="<?php echo U('Category/lst') ?>" target="main-frame">商品分类</a></li>
                     <li class="menu-item"><a href="<?php echo U('Brand/lst') ?>" target="main-frame">商品品牌</a></li>
                     <li class="menu-item"><a href="<?php echo U('Type/lst') ?>" target="main-frame">商品类型</a></li>

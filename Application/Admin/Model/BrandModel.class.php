@@ -137,7 +137,33 @@ class BrandModel extends Model {
     }
     //前台获取品牌所有信息
     public function brandDetail($id){
-        $data = $this->find($id);
+        $brandData = $this->find($id);
+        //商品图片去重
+        $gpModel = D('goods_img');
+        $da = $gpModel->field('min(id) as id')
+            ->group('goods_id')
+            ->select();
+        foreach ($da as $v){
+            $imgId[] = $v['id'];
+        }
+        //获取商品信息
+        $where['is_on_sale'] = array('eq',1);
+        $where['b.id'] = array('in',$imgId);
+        $where['brand_id'] = array('eq',$id);
+        $goodsModel = D('Goods');
+        $goodsData = $goodsModel->field('a.id,a.goods_name,a.shop_price,a.tag,a.brand_id,b.img_src')
+            ->alias('a')
+            ->order('order_id asc')
+            ->where($where)
+            ->join('LEFT JOIN __GOODS_IMG__ b ON b.goods_id=a.id')
+            ->select();
+        foreach($goodsData as &$v){
+            $v['tag'] = explode(',',$v['tag']);
+        }
+        $data = array(
+            'brandData' => $brandData,
+            'goodsData' => $goodsData
+        );
         return $data;
     }
 }

@@ -18,7 +18,7 @@
 
 
 <div class="main-div">
-    <form action="/index.php/Admin/Category/edit/id/1.html" method="post" name="theForm" enctype="multipart/form-data">
+    <form action="/index.php/Admin/Category/edit/id/14.html" method="post" name="theForm" enctype="multipart/form-data">
         <table width="100%" id="general-table">
             <input type="hidden" name="id" value="<?php echo $idData['id'] ?>">
             <tr>

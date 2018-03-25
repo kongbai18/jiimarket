@@ -18,7 +18,7 @@
 
 
 <div class="form-div">
-    <form action="/index.php/Admin/attribute/lst/type_id/1.html" name="searchForm">
+    <form action="/index.php/Admin/Attribute/lst/type_id/1.html" name="searchForm">
     <p>
     属性名称：<input type="text" name="attr_name" size="15" value="<?php echo I('get.attr_name'); ?>" />
     </p>
