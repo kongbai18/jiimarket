@@ -143,7 +143,7 @@ class GoodsController extends Controller {
     //库存量
     public function goods_number(){
         //获取商品ID
-        $id = I('get.id');
+        $goodsId = I('get.id');
         $gnModel = D('goods_number');
         //取出商品所有可选属性值
         $gaModel = D('goods_attr');
@@ -151,17 +151,16 @@ class GoodsController extends Controller {
             ->field('a.*,b.attr_name,b.attr_type,b.attr_option_values,b.type_id')
             ->join('LEFT JOIN __ATTRIBUTE__ b ON a.attr_id=b.id')
             ->where(array(
-                'a.goods_id' => array('eq',$id),
+                'a.goods_id' => array('eq',$goodsId),
                 'b.attr_type' => array('eq','2'),
             ))->select();
         //判断是否接收表单
         if(IS_POST){
-            //删除原库存
-            $gnData = $gnModel->where(array(
-                'goods_id' => array('eq',$id),
-            ))->delete();
+            //var_dump($_POST);die;
+            $id = I('post.id');
             $gaid = I('post.goods_attr_id');
             $gn = I('post.goods_number');
+            $gp = I('post.goods_price');
             //计算商品属性和库存量比例
             $gaidCount = count($gaid);
             $gnCount = count($gn);
@@ -169,6 +168,7 @@ class GoodsController extends Controller {
             //循环库存量
             $_i = 0;
             foreach($gn as $k => $v){
+                echo $v;
                 $_goodsAttrId = array();
                 for($i=0;$i<$rate;$i++){
                     $_goodsAttrId[] = $gaid[$_i];
@@ -176,11 +176,64 @@ class GoodsController extends Controller {
                 }
                 sort($_goodsAttrId,SORT_NUMERIC);//以数字形式升序
                 $_goodsAttrId = (string)implode(',',$_goodsAttrId);
-                $gnModel->add(array(
-                    'goods_id' => $id,
-                    'goods_attr_id' => $_goodsAttrId,
-                    'goods_number' => $v,
-                ));
+                if($_FILES['goods_img']['error'][$k] == 0){
+                    $file = $_FILES['goods_img']['tmp_name'][$k];
+                    $key = 'view/images/goodsAttrImg/'.date("Y/m/d").'/'.rand().$_FILES['goods_img']['name'][$k];
+                    $ret = qiniu_img_upload($key,$file);
+                    if($ret['flag'] == 1){
+                        if($id[$k] != ''){
+                            //获取旧LOGO地址
+                            $oldImg = $gnModel->field('img_src')->find($id[$k]);
+                            //var_dump($oldImg);die;
+                            foreach($oldImg as $v1) {
+                                if ($v1 != '') {
+                                    $key = rtrim($v, '?');
+                                    $key = ltrim($key, 'http://p5koaz6je.bkt.clouddn.com/');
+                                    qiniu_img_delete($key);
+                                }
+                            }
+                        }
+                        $img = $ret['img'];
+                    }else{
+                        $img = '';
+                    }
+                    if($id[$k] != ''){
+                        $data=array(
+                            'goods_id' => $goodsId,
+                            'goods_attr_id' => $_goodsAttrId,
+                            'goods_number' => $v,
+                            'goods_price' => $gp[$k],
+                            'img_src' => $img,
+                        );
+                        echo $v;
+                        $gnModel->where('id='.$id[$k])->save($data);
+                    }else{
+                        $gnModel->add(array(
+                            'goods_id' => $goodsId,
+                            'goods_attr_id' => $_goodsAttrId,
+                            'goods_number' => $v,
+                            'goods_price' => $gp[$k],
+                            'img_src' => $img,
+                        ));
+                    }
+                }else{
+                    if($id[$k] != ''){
+                        $data=array(
+                            'goods_id' => $goodsId,
+                            'goods_attr_id' => $_goodsAttrId,
+                            'goods_number' => $v,
+                            'goods_price' => $gp[$k],
+                        );
+                        $gnModel->where('id='.$id[$k])->save($data);
+                    }else{
+                        $gnModel->add(array(
+                            'goods_id' => $goodsId,
+                            'goods_attr_id' => $_goodsAttrId,
+                            'goods_number' => $v,
+                            'goods_price' => $gp[$k],
+                        ));
+                    }
+                }
             }
             echo "<script language=\"JavaScript\">alert(\"库存修改完成!\");</script>";
         }
@@ -190,7 +243,7 @@ class GoodsController extends Controller {
         }
         //获取商品库存
         $gnData = $gnModel->where(array(
-            'goods_id' => array('eq',$id),
+            'goods_id' => array('eq',$goodsId),
         ))->select();
         $this->assign(array(
             'gnData' => $gnData,

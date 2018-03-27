@@ -47,4 +47,10 @@ class IndexController extends Controller {
         $goodsModel = D('Admin/Goods');
         echo json_encode($goodsModel->goodsSearch());
     }
+    //单品选择属性时改变价格
+    public function changeAttr(){
+        $goodsModel = D('Admin/Goods');
+        //var_dump($goodsModel->changAttr());
+        echo json_encode($goodsModel->changeAttr());
+    }
 }

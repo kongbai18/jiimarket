@@ -92,11 +92,13 @@ CREATE TABLE IF NOT EXISTS `jii_goods_attr` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品属性';
 
 CREATE TABLE IF NOT EXISTS `jii_goods_number` (
+  `id` mediumint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `goods_id` mediumint(8) unsigned NOT NULL COMMENT '商品Id',
   `goods_attr_id` varchar(50) NOT NULL COMMENT '商品属性ID',
   `goods_price` decimal(10,0) NOT NULL COMMENT '商品价格',
   `goods_number` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '库存数量',
-  `img_src` VARCHAR(150) NOT NULL COMMENT '对应图片',
+  `img_src` VARCHAR(150) NOT NULL DEFAULT '' COMMENT '对应图片',
+  PRIMARY KEY (`id`),
   KEY `goods_id` (`goods_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品库存及图片';
 

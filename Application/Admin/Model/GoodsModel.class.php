@@ -399,20 +399,78 @@ class GoodsModel extends Model {
 
         $attrModel = D('goods_attr');
         $attrWhere['goods_id'] = array('eq',$id);
-        $attr = $attrModel->field('a.*,b.attr_name,b.attr_type')
+        $attrDa = $attrModel->field('a.*,b.attr_name,b.attr_type')
             ->alias('a')
             ->join('LEFT JOIN __ATTRIBUTE__ b ON a.attr_id=b.id')
             ->where($attrWhere)
             ->select();
-        foreach ($attr as $v){
+        foreach ($attrDa as $v){
             $attrData[$v['attr_id']][] = $v;
+        }
+        $gnModel = D('goods_number');
+        $gnData = $gnModel->field('goods_attr_id,goods_price,img_src')
+            ->where(array(
+                'goods_id' => array('eq',$id),
+                'goods_number' => array('neq','0')
+            ))
+            ->select();
+
+
+         $attr = explode(',',$gnData[0]['goods_attr_id']);
+         foreach ($attr as $v){
+             foreach ($attrData as &$v1){
+                 foreach ($v1 as &$v2){
+                     if($v2['attr_type']==2 && $v2['id']==$v ){
+                         $v1[0]['attr'] = $v;
+                         $v2['attr'] = $v;
+                     }
+                 }
+             }
+         }
+        //获取商品所有可选属性
+        $att = array();
+        foreach ($attrData as $k => $v){
+             if ($v[0]['attr_type']=='2'){
+                 foreach ($v as $v3){
+                     $att[$k][] = $v3['id'];
+                 }
+             }
+        }
+
+        foreach ($attr as $k4 => $v4){
+            foreach ($att as $k5 => $v5){
+                if(in_array($v4,$v5)){
+                    foreach ($att as $k6 =>$v6){
+                        if($k5 != $k6){
+                            foreach ($att[$k6] as $k7 => $v7){
+                                $num = 0;
+                                foreach ($gnData as $k8 => $v8){
+                                    $zuhe = explode(',',$v8['goods_attr_id']);
+                                    if(in_array($v4,$zuhe) && in_array($v7,$zuhe)){
+                                        $num = $num+1;
+                                    }
+                                }
+                                if($num==0){
+                                    foreach ($attrData[$k6] as $k9 => $v9) {
+                                        if ($v9['id'] == $v7) {
+                                            $attrData[$k6][$k9]['num'] = 'false';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         $data = array(
             'goodsData' => $goodsData,
             'goodsImg' => $imgData,
             'attrData' => $attrData,
             'descData' => $descData,
+            'gnData' => $gnData,
         );
+
         return $data;
 
     }
@@ -442,6 +500,119 @@ class GoodsModel extends Model {
         foreach($data as &$v){
             $v['tag'] = explode(',',$v['tag']);
         }
+        return $data;
+    }
+    //选择商品时选择属性
+    public function changeAttr(){
+        $goodsId = I('get.goodsId');
+        $goodsAttrId = I('get.goodsAttrId');
+        $goodsAttrId = explode(',',$goodsAttrId);
+        foreach ($goodsAttrId as $v){
+            if($v != ''){
+                $attr[] = $v;
+            }
+        }
+        sort($attr,SORT_NUMERIC);//以数字形式升序
+        $attrr = (string)implode(',',$attr);
+        $gnModel = D('goods_number');
+        $gnData = $gnModel->field('goods_price,goods_number,img_src')
+            ->where(array(
+                'goods_id' => array('eq',$goodsId),
+                'goods_attr_id' =>array('eq',$attrr)
+            ))->select();
+        //获取所有库存不为0的属性
+        $gnAllData = $gnModel->field('goods_attr_id,goods_price,img_src')
+            ->where(array(
+                'goods_id' => array('eq',$goodsId),
+                'goods_number' => array('neq','0')
+            ))
+            ->select();
+
+        $attrModel = D('goods_attr');
+        $attrWhere['goods_id'] = array('eq',$goodsId);
+        $attData = $attrModel->field('a.*,b.attr_name,b.attr_type')
+            ->alias('a')
+            ->join('LEFT JOIN __ATTRIBUTE__ b ON a.attr_id=b.id')
+            ->where($attrWhere)
+            ->select();
+        foreach ($attData as $v){
+            $attrData[$v['attr_id']][] = $v;
+        }
+        foreach ($attr as $v){
+            foreach ($attrData as &$v1){
+                foreach ($v1 as &$v2){
+                    if($v2['attr_type']==2 && $v2['id']==$v ){
+                        $v1[0]['attr'] = $v;
+                        $v2['attr'] = $v;
+                    }
+                }
+            }
+        }
+        //获取商品所有可选属性
+        $att = array();
+        foreach ($attrData as $k => $v){
+            if ($v[0]['attr_type']=='2'){
+                foreach ($v as $v3){
+                    $att[$k][] = $v3['id'];
+                }
+            }
+        }
+        if(empty($gnData)){
+            $gnData = '';
+        }
+        foreach ($attr as $k4 => $v4){
+            foreach ($att as $k5 => $v5){
+                if(in_array($v4,$v5)){
+                    $cat[] = $k5;
+                    foreach ($att as $k6 =>$v6){
+                        if($k5 != $k6){
+                            foreach ($att[$k6] as $k7 => $v7){
+                                $num = 0;
+                                foreach ($gnAllData as $k8 => $v8){
+                                    $zuhe = explode(',',$v8['goods_attr_id']);
+                                    if(in_array($v4,$zuhe) && in_array($v7,$zuhe)){
+                                        $num = $num+1;
+                                    }
+                                }
+                                if($num==0){
+                                    foreach ($attrData[$k6] as $k9 => $v9) {
+                                        if ($v9['id'] == $v7) {
+                                            $attrData[$k6][$k9]['num'] = 'false';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if(empty($gnData)){
+            $gnData = '';
+            if(empty($cat)){
+                foreach ($attrData as $k13 => $v13){
+                        foreach ($attrData[$k13] as $k14 => $v14){
+                            $attrData[$k13][$k14]['num'] = 'true';
+                        }
+                }
+            }else{
+                foreach ($cat as $v10){
+                    foreach ($attrData as $k11 => $v11){
+                        if($v10 == $k11){
+                            foreach ($attrData[$k11] as $k12 => $v12){
+                                $attrData[$k11][$k12]['num'] = 'true';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        $data = array(
+            'gnData' => $gnData,
+            'attrData' => $attrData,
+        );
         return $data;
     }
 }

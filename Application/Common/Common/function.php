@@ -6,7 +6,7 @@
  * Time: 16:59
  */
 
-    require '/Public/Qiniu/autoload.php';
+    require (APP_PATH.'../Public/Qiniu/autoload.php');
     use Qiniu\Auth;
     use Qiniu\Storage\UploadManager;
     use Qiniu\Processing\Operation;

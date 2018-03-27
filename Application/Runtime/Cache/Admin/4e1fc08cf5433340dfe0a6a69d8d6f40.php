@@ -18,7 +18,7 @@
 
 
 <div class="main-div">
-    <form method="post" action="/index.php/Admin/Brand/edit/id/5.html"enctype="multipart/form-data" >
+    <form method="post" action="/index.php/Admin/Brand/edit/id/3.html"enctype="multipart/form-data" >
         <table cellspacing="1" cellpadding="3" width="100%">
             <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
             <tr>
