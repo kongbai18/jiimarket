@@ -120,34 +120,70 @@ class GoodsModel extends Model {
         }
         /***************处理商品属性******************/
         $gaid = I('post.goods_attr_id');
+        $typeId = I('post.type_id');
         $attrValue = I('post.attr_value');
         $gaModel = D('goods_attr');
-        $_i = 0;
-        foreach($attrValue as $k => $v){
-            foreach($v as $k1 => $v1){
-                if($gaid[$_i]){
-                    if($v1 == ''){
-                        //删除
-                        $gaModel->delete($gaid[$_i]);
+        $goodsModel = D('goods');
+        $oldTpye = $goodsModel->field('type_id')->find($option['where']['id']);
+        if($oldTpye['type_id'] == $typeId){
+            $_i = 0;
+            foreach($attrValue as $k => $v){
+                foreach($v as $k1 => $v1){
+                    if($gaid[$_i]){
+                        if($v1 == ''){
+                            //删除
+                            $gaModel->delete($gaid[$_i]);
+                        }else{
+                            //修改
+                            $gaModel->where('id='.$gaid[$_i])->setField(array(
+                                'attr_value' => $v1,
+                            ));
+                        }
                     }else{
-                        //修改
-                        $gaModel->where('id='.$gaid[$_i])->setField(array(
-                            'attr_value' => $v1,
-                        ));
+                        //添加
+                        if($v1){
+                            $gaModel->add(array(
+                                'attr_value' => $v1,
+                                'attr_id' => $k,
+                                'goods_id' => $option['where']['id'],
+                            ));
+                        }
                     }
-                }else{
-                    //添加
-                    if($v1){
-                        $gaModel->add(array(
-                            'attr_value' => $v1,
-                            'attr_id' => $k,
-                            'goods_id' => $option['where']['id'],
-                        ));
-                    }
+                    $_i++;
                 }
-                $_i++;
+            }
+        }else{
+            $gaModel->where(array(
+                'goods_id' => array('eq',$option['where']['id'])
+            ))->delete();
+            $_i = 0;
+            foreach($attrValue as $k => $v){
+                foreach($v as $k1 => $v1){
+                    if($gaid[$_i]){
+                        if($v1 == ''){
+                            //删除
+                            $gaModel->delete($gaid[$_i]);
+                        }else{
+                            //修改
+                            $gaModel->where('id='.$gaid[$_i])->setField(array(
+                                'attr_value' => $v1,
+                            ));
+                        }
+                    }else{
+                        //添加
+                        if($v1){
+                            $gaModel->add(array(
+                                'attr_value' => $v1,
+                                'attr_id' => $k,
+                                'goods_id' => $option['where']['id'],
+                            ));
+                        }
+                    }
+                    $_i++;
+                }
             }
         }
+
         /***************处理扩展分类***************/
         //删除原分类
         $gcModel = D('goods_cat');
@@ -408,10 +444,10 @@ class GoodsModel extends Model {
             $attrData[$v['attr_id']][] = $v;
         }
         $gnModel = D('goods_number');
-        $gnData = $gnModel->field('goods_attr_id,goods_price,img_src')
+        $gnData = $gnModel->field('goods_attr_id,goods_price,goods_number,img_src')
             ->where(array(
                 'goods_id' => array('eq',$id),
-                'goods_number' => array('neq','0')
+                'goods_number' => array('gt','0')
             ))
             ->select();
 
@@ -436,25 +472,53 @@ class GoodsModel extends Model {
                  }
              }
         }
+        if(empty($gnData)){
+            $atAll = 0;
+            foreach ($attrData as $k12 => $v12){
+                     if($attrData[$k12][0]['attr_type'] == '2'){
+                         $atAll = $atAll+1;
+                         foreach ($attrData[$k12] as $k13 => $v13){
+                             $attrData[$k12][$k13]['num'] = 'false';
+                         }
+                     }
+            }
+            if ($atAll == 0){
+                $gnData[0]['goods_attr_id'] = '00';
+            }else{
+                $gnData[0] = '';
+            }
+        }else {
+            $n = count($attr);
+            $sub_array = array();
 
-        foreach ($attr as $k4 => $v4){
-            foreach ($att as $k5 => $v5){
-                if(in_array($v4,$v5)){
-                    foreach ($att as $k6 =>$v6){
-                        if($k5 != $k6){
-                            foreach ($att[$k6] as $k7 => $v7){
-                                $num = 0;
-                                foreach ($gnData as $k8 => $v8){
-                                    $zuhe = explode(',',$v8['goods_attr_id']);
-                                    if(in_array($v4,$zuhe) && in_array($v7,$zuhe)){
-                                        $num = $num+1;
-                                    }
+            for ($i = 0; $i < $n; $i++) {
+                $sub_attr = $attr;
+                unset($sub_attr[$i]);
+                $sub_array[] = $sub_attr;
+            }
+            foreach ($sub_array as $k4 => $v4) {
+                $haAttr = array();
+                foreach ($v4 as $k5 => $v5) {
+                    foreach ($att as $k6 => $v6) {
+                        if (in_array($v5, $v6)) {
+                            $haAttr[] = $k6;
+                        }
+                    }
+                }
+                foreach ($att as $k7 => $v7) {
+                    if (!in_array($k7, $haAttr)) {
+                        foreach ($att[$k7] as $k8 => $v8) {
+                            $num = 0;
+                            foreach ($gnData as $k9 => $v9) {
+                                $zuhe = explode(',', $v9['goods_attr_id']);
+                                if ($v4 == array_intersect($v4, $zuhe) && in_array($v8, $zuhe)) {
+                                    $num = $num + 1;
                                 }
-                                if($num==0){
-                                    foreach ($attrData[$k6] as $k9 => $v9) {
-                                        if ($v9['id'] == $v7) {
-                                            $attrData[$k6][$k9]['num'] = 'false';
-                                        }
+                            }
+                            if ($num == 0) {
+                                foreach ($attrData[$k7] as $k10 => $v10) {
+                                    if ($v10['id'] == $v8) {
+                                        $attrData[$k7][$k10]['num'] = 'false';
                                     }
                                 }
                             }
@@ -463,6 +527,36 @@ class GoodsModel extends Model {
                 }
             }
         }
+
+/*            foreach ($attr as $k4 => $v4){
+                foreach ($att as $k5 => $v5){
+                    if(in_array($v4,$v5)){
+                        foreach ($att as $k6 =>$v6){
+                            if($k5 != $k6){
+                                foreach ($att[$k6] as $k7 => $v7){
+                                    $num = 0;
+                                    foreach ($gnData as $k8 => $v8){
+                                        $zuhe = explode(',',$v8['goods_attr_id']);
+                                        if(in_array($v4,$zuhe) && in_array($v7,$zuhe)){
+                                            $num = $num+1;
+                                            }
+                                        }
+                                    }
+                                    if($num==0){
+                                        foreach ($attrData[$k6] as $k9 => $v9) {
+                                            if ($v9['id'] == $v7) {
+                                                $attrData[$k6][$k9]['num'] = 'false';
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }*/
+
         $data = array(
             'goodsData' => $goodsData,
             'goodsImg' => $imgData,
@@ -508,7 +602,7 @@ class GoodsModel extends Model {
         $goodsAttrId = I('get.goodsAttrId');
         $goodsAttrId = explode(',',$goodsAttrId);
         foreach ($goodsAttrId as $v){
-            if($v != ''){
+            if($v != '' && $v != 'undefined'){
                 $attr[] = $v;
             }
         }
@@ -524,7 +618,7 @@ class GoodsModel extends Model {
         $gnAllData = $gnModel->field('goods_attr_id,goods_price,img_src')
             ->where(array(
                 'goods_id' => array('eq',$goodsId),
-                'goods_number' => array('neq','0')
+                'goods_number' => array('gt','0')
             ))
             ->select();
 
@@ -550,35 +644,58 @@ class GoodsModel extends Model {
         }
         //获取商品所有可选属性
         $att = array();
+        $max = 0;
         foreach ($attrData as $k => $v){
             if ($v[0]['attr_type']=='2'){
+                $max = $max+1;
                 foreach ($v as $v3){
                     $att[$k][] = $v3['id'];
                 }
             }
         }
         if(empty($gnData)){
-            $gnData = '';
+            $gnData[0] = '';
         }
-        foreach ($attr as $k4 => $v4){
-            foreach ($att as $k5 => $v5){
-                if(in_array($v4,$v5)){
-                    $cat[] = $k5;
-                    foreach ($att as $k6 =>$v6){
-                        if($k5 != $k6){
-                            foreach ($att[$k6] as $k7 => $v7){
-                                $num = 0;
-                                foreach ($gnAllData as $k8 => $v8){
-                                    $zuhe = explode(',',$v8['goods_attr_id']);
-                                    if(in_array($v4,$zuhe) && in_array($v7,$zuhe)){
-                                        $num = $num+1;
-                                    }
+
+        $n = count($attr);
+        $sub_array = array();
+        if($n<=$max && $n > 1){
+            for ($i = 0; $i < $n; $i++) {
+                $sub_attr = $attr;
+                unset($sub_attr[$i]);
+                $sub_array[] = $sub_attr;
+            }
+            if($n < $max){
+                $sub_array[] = $attr;
+            }
+        }else if($n=1){
+            $sub_array[] = $attr;
+        }
+
+        if($n>=1){
+            foreach ($sub_array as $k4 => $v4) {
+                $haAttr = array();
+                foreach ($v4 as $k5 => $v5) {
+                    foreach ($att as $k6 => $v6) {
+                        if (in_array($v5, $v6)) {
+                            $haAttr[] = $k6;
+                        }
+                    }
+                }
+                foreach ($att as $k7 => $v7) {
+                    if (!in_array($k7, $haAttr)) {
+                        foreach ($att[$k7] as $k8 => $v8) {
+                            $num = 0;
+                            foreach ($gnAllData as $k9 => $v9) {
+                                $zuhe = explode(',', $v9['goods_attr_id']);
+                                if ($v4 == array_intersect($v4, $zuhe) && in_array($v8, $zuhe)) {
+                                    $num = $num + 1;
                                 }
-                                if($num==0){
-                                    foreach ($attrData[$k6] as $k9 => $v9) {
-                                        if ($v9['id'] == $v7) {
-                                            $attrData[$k6][$k9]['num'] = 'false';
-                                        }
+                            }
+                            if ($num == 0) {
+                                foreach ($attrData[$k7] as $k10 => $v10) {
+                                    if ($v10['id'] == $v8) {
+                                        $attrData[$k7][$k10]['num'] = 'false';
                                     }
                                 }
                             }
@@ -588,30 +705,11 @@ class GoodsModel extends Model {
             }
         }
 
-        if(empty($gnData)){
-            $gnData = '';
-            if(empty($cat)){
-                foreach ($attrData as $k13 => $v13){
-                        foreach ($attrData[$k13] as $k14 => $v14){
-                            $attrData[$k13][$k14]['num'] = 'true';
-                        }
-                }
-            }else{
-                foreach ($cat as $v10){
-                    foreach ($attrData as $k11 => $v11){
-                        if($v10 == $k11){
-                            foreach ($attrData[$k11] as $k12 => $v12){
-                                $attrData[$k11][$k12]['num'] = 'true';
-                            }
-                        }
-                    }
-                }
-            }
-        }
 
         $data = array(
             'gnData' => $gnData,
             'attrData' => $attrData,
+            'sub_array' => $attrr
         );
         return $data;
     }

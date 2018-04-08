@@ -1,7 +1,6 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-class BrandController extends Controller {
+class BrandController extends BaseController {
     //品牌列表
      public function lst(){
          $model = D('brand');

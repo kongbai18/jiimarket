@@ -1,7 +1,6 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-class TypeController extends Controller {
+class TypeController extends BaseController {
     //类别列表
     public function lst(){
       $model = D('type');

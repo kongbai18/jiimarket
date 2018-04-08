@@ -7,7 +7,7 @@
  */
 namespace Admin\Controller;
 use Think\Controller;
-class GoodsController extends Controller {
+class GoodsController extends BaseController {
     //商品列表
     public function lst(){
         $model = D('goods');

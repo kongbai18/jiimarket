@@ -6,8 +6,7 @@
  * Time: 9:37
  */
 namespace Admin\Controller;
-use Think\Controller;
-class CategoryController extends Controller {
+class CategoryController extends BaseController {
     //分类列表
     public function lst(){
         $model = D('category');

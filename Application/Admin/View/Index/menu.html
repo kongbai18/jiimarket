@@ -130,28 +130,24 @@ body {
                     <li class="menu-item"><a href="<?php echo U('Category/lst') ?>" target="main-frame">商品分类</a></li>
                     <li class="menu-item"><a href="<?php echo U('Brand/lst') ?>" target="main-frame">商品品牌</a></li>
                     <li class="menu-item"><a href="<?php echo U('Type/lst') ?>" target="main-frame">商品类型</a></li>
-                    <li class="menu-item"><a href="goodsTrash.html" target="main-frame">商品回收站</a></li>
                 </ul>
             </li>
 
             <li class="explode" key="04_order" name="menu">
             订单管理
                 <ul>
-                    <li class="menu-item"><a href="orderList.html" target="main-frame">订单列表</a></li>
-                    <li class="menu-item"><a href="orderQuery.html" target="main-frame">订单查询</a></li>
-                    <li class="menu-item"><a href="orderAdd.html" target="main-frame">添加订单</a></li>
-                    <li class="menu-item"><a href="delivery_list.html" target="main-frame">发货单列表</a></li>
+                    <li class="menu-item"><a href="<?php echo U('Order/lst') ?>" target="main-frame">订单列表</a></li>
+                    <li class="menu-item"><a href="<?php echo U('Order/deli') ?>" target="main-frame">发货单列表</a></li>
                     <li class="menu-item"><a href="back_list.html" target="main-frame">退货单列表</a></li>
                 </ul>
             </li>
-            <li class="explode" key="08_members" name="menu">
-            会员管理
+            <li class="explode" key="04_order" name="menu">
+                管理员
                 <ul>
-                    <li class="menu-item"><a href="userList.html" target="main-frame">会员列表</a></li>
-                    <li class="menu-item"><a href="userAdd.html" target="main-frame">添加会员</a></li>
-                    <li class="menu-item"><a href="userMessage.html" target="main-frame">会员留言</a></li>
+                    <li class="menu-item"><a href="<?php echo U('Admin/edit') ?>" target="main-frame">修改密码</a></li>
                 </ul>
             </li>
+
         </ul>
     </div>
     <div id="help-div" style="display:none">

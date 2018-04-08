@@ -53,4 +53,83 @@ class IndexController extends Controller {
         //var_dump($goodsModel->changAttr());
         echo json_encode($goodsModel->changeAttr());
     }
+    //微信小程序登陆
+    public function login(){
+        $userModel = D('Admin/User');
+        echo json_encode($userModel->login());
+    }
+    //添加商品到购物车
+    public function addCart(){
+        $cartModel = D('Admin/Cart');
+        echo json_encode($cartModel->addCart());
+    }
+    //购物车列表
+    public function listCart(){
+        $cartModel = D('Admin/Cart');
+        echo json_encode($cartModel->listCart());
+    }
+    //删除购物车中物品
+    public function delCart(){
+        $cartModel = D('Admin/Cart');
+        echo json_encode($cartModel->delCart());
+    }
+    //添加地址
+    public function addAddress(){
+        $addressModel = D('Admin/Address');
+        echo json_encode($addressModel->addAddress());
+    }
+    //地址列表
+    public function addressList(){
+        $addressModel = D('Admin/Address');
+        echo json_encode($addressModel->addressList());
+    }
+    //修改默认地址
+    public function editDefault(){
+        $addressModel = D('Admin/Address');
+        echo json_encode($addressModel->editDefault());
+    }
+    //获取默认地址
+    public function addressDef(){
+        $addressModel = D('Admin/Address');
+        echo json_encode($addressModel->addressDef());
+    }
+    //生成订单
+    public function addOrder(){
+        $orderModel = D('Admin/Order');
+        echo json_encode($orderModel->addOrder());
+    }
+    //订单信息
+    public function userOrder(){
+        $orderModel = D('Admin/Order');
+        echo json_encode($orderModel->userOrder());
+    }
+    //取消信息
+    public function removeOrder(){
+        $orderModel = D('Admin/Order');
+        echo json_encode($orderModel->removeOrder());
+    }
+    //取消信息
+    public function payOrder(){
+        $orderModel = D('Admin/Order');
+        echo json_encode($orderModel->payOrder());
+    }
+    //完成支付
+    public function comPay(){
+        $orderModel = D('Admin/Order');
+        echo json_encode($orderModel->comPay());
+    }
+    //订单状态
+    public function orderState(){
+        $orderModel = D('Admin/Order');
+        echo json_encode($orderModel->orderState());
+    }
+    //完成订单
+    public function comOrder(){
+        $orderModel = D('Admin/Order');
+        echo json_encode($orderModel->comOrder());
+    }
+    public function test(){
+        var_dump(refund('20180408093927573228',100));
+
+    }
 }

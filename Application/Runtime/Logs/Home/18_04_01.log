@@ -1,0 +1,71 @@
+[ 2018-04-01T15:41:37+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/addOrder?userKey=fiepaff5ui8sasvgvu7fk8fu52&mes=&address=%E6%9D%8E%E9%92%A2%2C18720920196%2C%E5%8C%97%E4%BA%AC%E5%B8%82%E5%B8%82%E8%BE%96%E5%8C%BA%E4%B8%9C%E5%9F%8E%E5%8C%BA%E4%B8%89%E9%87%8C%E5%B1%AF&goods=%5B%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%221%2C2%2C68%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E7%BE%8E%E5%9B%BD%E9%BB%91%E8%83%A1%E6%A1%83%E6%9C%A8%22%2C%22%E5%8E%9F%E6%9C%A8%E8%89%B2%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221237%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F19682%E8%BD%AE%E6%92%AD%E5%9B%BE1.png%3F%22%2C%22max_num%22%3A%2245%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2265%2C67%2C68%22%2C%22cart_number%22%3A%224%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E6%A9%A1%E6%9C%A8%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221423%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F4912%E8%BD%AE%E6%92%AD%E5%9B%BE4.png%3F%22%2C%22max_num%22%3A%226%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2266%2C67%2C69%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E9%87%91%E5%B1%9E%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2285*95*46%22%5D%2C%22goods_price%22%3A%221486%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F30927%E8%AF%A6%E6%83%85%E5%9B%BE2.png%3F%22%2C%22max_num%22%3A%224%22%2C%22choose%22%3Atrue%7D%5D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0008s ]
+
+[ 2018-04-01T15:52:04+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/addOrder?userKey=fiepaff5ui8sasvgvu7fk8fu52&mes=&address=%E6%9D%8E%E9%92%A2%2C18720920196%2C%E5%8C%97%E4%BA%AC%E5%B8%82%E5%B8%82%E8%BE%96%E5%8C%BA%E4%B8%9C%E5%9F%8E%E5%8C%BA%E4%B8%89%E9%87%8C%E5%B1%AF&goods=%5B%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%221%2C2%2C68%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E7%BE%8E%E5%9B%BD%E9%BB%91%E8%83%A1%E6%A1%83%E6%9C%A8%22%2C%22%E5%8E%9F%E6%9C%A8%E8%89%B2%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221237%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F19682%E8%BD%AE%E6%92%AD%E5%9B%BE1.png%3F%22%2C%22max_num%22%3A%2245%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2265%2C67%2C68%22%2C%22cart_number%22%3A%224%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E6%A9%A1%E6%9C%A8%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221423%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F4912%E8%BD%AE%E6%92%AD%E5%9B%BE4.png%3F%22%2C%22max_num%22%3A%226%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2266%2C67%2C69%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E9%87%91%E5%B1%9E%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2285*95*46%22%5D%2C%22goods_price%22%3A%221486%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F30927%E8%AF%A6%E6%83%85%E5%9B%BE2.png%3F%22%2C%22max_num%22%3A%224%22%2C%22choose%22%3Atrue%7D%5D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000783s ]
+
+[ 2018-04-01T15:53:00+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/addOrder?userKey=fiepaff5ui8sasvgvu7fk8fu52&mes=&address=%E6%9D%8E%E9%92%A2%2C18720920196%2C%E5%8C%97%E4%BA%AC%E5%B8%82%E5%B8%82%E8%BE%96%E5%8C%BA%E4%B8%9C%E5%9F%8E%E5%8C%BA%E4%B8%89%E9%87%8C%E5%B1%AF&goods=%5B%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%221%2C2%2C68%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E7%BE%8E%E5%9B%BD%E9%BB%91%E8%83%A1%E6%A1%83%E6%9C%A8%22%2C%22%E5%8E%9F%E6%9C%A8%E8%89%B2%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221237%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F19682%E8%BD%AE%E6%92%AD%E5%9B%BE1.png%3F%22%2C%22max_num%22%3A%2245%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2265%2C67%2C68%22%2C%22cart_number%22%3A%224%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E6%A9%A1%E6%9C%A8%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221423%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F4912%E8%BD%AE%E6%92%AD%E5%9B%BE4.png%3F%22%2C%22max_num%22%3A%226%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2266%2C67%2C69%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E9%87%91%E5%B1%9E%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2285*95*46%22%5D%2C%22goods_price%22%3A%221486%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F30927%E8%AF%A6%E6%83%85%E5%9B%BE2.png%3F%22%2C%22max_num%22%3A%224%22%2C%22choose%22%3Atrue%7D%5D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000750s ]
+
+[ 2018-04-01T15:53:20+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/addOrder?userKey=fiepaff5ui8sasvgvu7fk8fu52&mes=&address=%E6%9D%8E%E9%92%A2%2C18720920196%2C%E5%8C%97%E4%BA%AC%E5%B8%82%E5%B8%82%E8%BE%96%E5%8C%BA%E4%B8%9C%E5%9F%8E%E5%8C%BA%E4%B8%89%E9%87%8C%E5%B1%AF&goods=%5B%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%221%2C2%2C68%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E7%BE%8E%E5%9B%BD%E9%BB%91%E8%83%A1%E6%A1%83%E6%9C%A8%22%2C%22%E5%8E%9F%E6%9C%A8%E8%89%B2%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221237%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F19682%E8%BD%AE%E6%92%AD%E5%9B%BE1.png%3F%22%2C%22max_num%22%3A%2245%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2265%2C67%2C68%22%2C%22cart_number%22%3A%224%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E6%A9%A1%E6%9C%A8%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221423%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F4912%E8%BD%AE%E6%92%AD%E5%9B%BE4.png%3F%22%2C%22max_num%22%3A%226%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2266%2C67%2C69%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E9%87%91%E5%B1%9E%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2285*95*46%22%5D%2C%22goods_price%22%3A%221486%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F30927%E8%AF%A6%E6%83%85%E5%9B%BE2.png%3F%22%2C%22max_num%22%3A%224%22%2C%22choose%22%3Atrue%7D%5D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000955s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000972s ]
+
+[ 2018-04-01T15:53:40+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/addOrder?userKey=fiepaff5ui8sasvgvu7fk8fu52&mes=&address=%E6%9D%8E%E9%92%A2%2C18720920196%2C%E5%8C%97%E4%BA%AC%E5%B8%82%E5%B8%82%E8%BE%96%E5%8C%BA%E4%B8%9C%E5%9F%8E%E5%8C%BA%E4%B8%89%E9%87%8C%E5%B1%AF&goods=%5B%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%221%2C2%2C68%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E7%BE%8E%E5%9B%BD%E9%BB%91%E8%83%A1%E6%A1%83%E6%9C%A8%22%2C%22%E5%8E%9F%E6%9C%A8%E8%89%B2%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221237%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F19682%E8%BD%AE%E6%92%AD%E5%9B%BE1.png%3F%22%2C%22max_num%22%3A%2245%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2265%2C67%2C68%22%2C%22cart_number%22%3A%224%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E6%A9%A1%E6%9C%A8%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221423%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F4912%E8%BD%AE%E6%92%AD%E5%9B%BE4.png%3F%22%2C%22max_num%22%3A%226%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2266%2C67%2C69%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E9%87%91%E5%B1%9E%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2285*95*46%22%5D%2C%22goods_price%22%3A%221486%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F30927%E8%AF%A6%E6%83%85%E5%9B%BE2.png%3F%22%2C%22max_num%22%3A%224%22%2C%22choose%22%3Atrue%7D%5D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001288s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2018-04-01T15:55:21+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/addOrder?userKey=fiepaff5ui8sasvgvu7fk8fu52&mes=&address=%E6%9D%8E%E9%92%A2%2C18720920196%2C%E5%8C%97%E4%BA%AC%E5%B8%82%E5%B8%82%E8%BE%96%E5%8C%BA%E4%B8%9C%E5%9F%8E%E5%8C%BA%E4%B8%89%E9%87%8C%E5%B1%AF&goods=%5B%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%221%2C2%2C68%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E7%BE%8E%E5%9B%BD%E9%BB%91%E8%83%A1%E6%A1%83%E6%9C%A8%22%2C%22%E5%8E%9F%E6%9C%A8%E8%89%B2%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221237%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F19682%E8%BD%AE%E6%92%AD%E5%9B%BE1.png%3F%22%2C%22max_num%22%3A%2245%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2265%2C67%2C68%22%2C%22cart_number%22%3A%224%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E6%A9%A1%E6%9C%A8%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2275*85*36%22%5D%2C%22goods_price%22%3A%221423%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F4912%E8%BD%AE%E6%92%AD%E5%9B%BE4.png%3F%22%2C%22max_num%22%3A%226%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%221%22%2C%22goods_id%22%3A%221%22%2C%22goods_attr_id%22%3A%2266%2C67%2C69%22%2C%22cart_number%22%3A%222%22%2C%22goods_name%22%3A%22Egon%E5%9F%83%E8%B4%A1%22%2C%22goods_attr%22%3A%5B%22%E9%87%91%E5%B1%9E%22%2C%22%E9%9B%85%E7%81%B0%22%2C%2285*95*46%22%5D%2C%22goods_price%22%3A%221486%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fview%2Fimages%2FgoodsAttrImg%2F2018%2F03%2F28%2F30927%E8%AF%A6%E6%83%85%E5%9B%BE2.png%3F%22%2C%22max_num%22%3A%224%22%2C%22choose%22%3Atrue%7D%5D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001313s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jii_goods_number` [ RunTime:0.0006s ]
+SQL: SELECT `goods_number` FROM `jii_goods_number` WHERE `goods_id` = '1' AND `goods_attr_id` = '1,2,68'  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000993s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001187s ]
+
