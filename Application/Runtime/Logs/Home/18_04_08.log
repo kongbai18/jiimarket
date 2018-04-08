@@ -4937,3 +4937,48 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000970s ]
 
+[ 2018-04-08T17:13:12+08:00 ] 127.0.0.1 /jiiMarket1/index.php/Home/index/goodsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001459s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jii_goods_img` [ RunTime:0.0011s ]
+SQL: SELECT min(id) as id FROM `jii_goods_img` GROUP BY goods_id  [ RunTime:0.0005s ]
+SQL: SELECT a.id,a.goods_name,a.shop_price,a.tag,b.img_src FROM jii_goods a LEFT JOIN jii_goods_img b ON b.goods_id=a.id  WHERE `is_on_sale` = 1 AND `is_hot` = 1 AND b.id IN ('11','15','20','22','48','24','28','32','36','39','41','45') ORDER BY order_id asc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002039s ]
+
+[ 2018-04-08T17:13:12+08:00 ] 127.0.0.1 /jiiMarket1/index.php/Home/index/indexBrand
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001601s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jii_brand` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`img_src` FROM `jii_brand` WHERE `is_index` = 1 ORDER BY order_id asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jii_goods_img` [ RunTime:0.0010s ]
+SQL: SELECT min(id) as id FROM `jii_goods_img` GROUP BY goods_id  [ RunTime:0.0008s ]
+SQL: SELECT a.id,a.goods_name,a.shop_price,a.tag,a.brand_id,b.img_src FROM jii_goods a LEFT JOIN jii_goods_img b ON b.goods_id=a.id  WHERE `is_on_sale` = 1 AND b.id IN ('11','15','20','22','48','24','28','32','36','39','41','45') AND `brand_id` IN ('1','2','3') ORDER BY order_id asc  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000963s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001092s ]
+
+[ 2018-04-08T17:13:12+08:00 ] 127.0.0.1 /jiiMarket1/index.php/Home/index/login?code=061qpXtJ1OP4Z402McsJ1cE9uJ1qpXt8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001259s ]
+SQL: SHOW COLUMNS FROM `jii_user` [ RunTime:0.0013s ]
+SQL: SELECT `id` FROM `jii_user` WHERE `openid` = 'ogAUJ4zvF5IkF_4bqWlBE1XwheVk' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001545s ]
+
