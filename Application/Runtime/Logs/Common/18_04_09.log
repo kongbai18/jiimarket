@@ -1,0 +1,24 @@
+[ 2018-04-09T13:49:14+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-04-09T13:53:54+08:00 ] 127.0.0.1 /Public/Admin/Styles/.__PUBLIC__/Admin/Images/th_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-09T13:53:58+08:00 ] 127.0.0.1 /Public/Admin/Styles/.__PUBLIC__/Admin/Images/icon_add.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+ERR: 无法加载模块:Public
+
+[ 2018-04-09T13:53:58+08:00 ] 127.0.0.1 /Public/Admin/Styles/.__PUBLIC__/Admin/Images/button_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+ERR: 无法加载模块:Public
+

@@ -129,7 +129,7 @@ class IndexController extends Controller {
         echo json_encode($orderModel->comOrder());
     }
     public function test(){
-        var_dump(refund('20180408093927573228',100));
+        var_dump(inquery('20180409141823402960'));
 
     }
 }

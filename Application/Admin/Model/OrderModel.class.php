@@ -341,8 +341,10 @@ class OrderModel extends Model {
                     $orderId = strval($orderId);
                     //执行退款
                     $rufund = refund($orderId,$orderData['price']*100);
-                    if($rufund = 'success'){
+                    if($rufund == 'success'){
                         $data = '11';
+                    }else{
+                        $data = '10';
                     }
                 }
             }
@@ -359,8 +361,8 @@ class OrderModel extends Model {
     //完成支付
     public function comPay(){
         $orderId = I('get.orderId');
-        $key = I('get.key');
-        if($key == "a401n3s71pfo65vnvpguse8hr0"){
+        $pay = inquery(strval($orderId));
+        if($pay == "success"){
             $date = time();
             $result = $this->save(array(
                 'order_id' => $orderId,

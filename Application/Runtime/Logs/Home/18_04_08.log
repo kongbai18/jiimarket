@@ -4982,3 +4982,342 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001322s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001545s ]
 
+[ 2018-04-08T17:21:42+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/goodsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jii_goods_img` [ RunTime:0.0005s ]
+SQL: SELECT min(id) as id FROM `jii_goods_img` GROUP BY goods_id  [ RunTime:0.0002s ]
+SQL: SELECT a.id,a.goods_name,a.shop_price,a.tag,b.img_src FROM jii_goods a LEFT JOIN jii_goods_img b ON b.goods_id=a.id  WHERE `is_on_sale` = 1 AND `is_hot` = 1 AND b.id IN ('11','15','20','22','48','24','28','32','36','39','41','45') ORDER BY order_id asc  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000959s ]
+
+[ 2018-04-08T17:21:42+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/indexBrand
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jii_brand` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name`,`img_src` FROM `jii_brand` WHERE `is_index` = 1 ORDER BY order_id asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `jii_goods_img` [ RunTime:0.0004s ]
+SQL: SELECT min(id) as id FROM `jii_goods_img` GROUP BY goods_id  [ RunTime:0.0002s ]
+SQL: SELECT a.id,a.goods_name,a.shop_price,a.tag,a.brand_id,b.img_src FROM jii_goods a LEFT JOIN jii_goods_img b ON b.goods_id=a.id  WHERE `is_on_sale` = 1 AND b.id IN ('11','15','20','22','48','24','28','32','36','39','41','45') AND `brand_id` IN ('1','2','3') ORDER BY order_id asc  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2018-04-08T17:21:43+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/login?code=011Vh5FT1XTSI71ESBHT1W7bFT1Vh5FD
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `jii_user` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `jii_user` WHERE `openid` = 'ogAUJ4zvF5IkF_4bqWlBE1XwheVk' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001264s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001442s ]
+
+[ 2018-04-08T17:21:44+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/getCate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `jii_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jii_category` ORDER BY order_id asc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000851s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000990s ]
+
+[ 2018-04-08T17:21:45+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/brandList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001524s ]
+SQL: SHOW COLUMNS FROM `jii_brand` [ RunTime:0.0007s ]
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant A - assumed 'A' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant B - assumed 'B' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant C - assumed 'C' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant D - assumed 'D' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant E - assumed 'E' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant F - assumed 'F' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant G - assumed 'G' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant H - assumed 'H' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant I - assumed 'I' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant G - assumed 'G' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant K - assumed 'K' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant L - assumed 'L' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant M - assumed 'M' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant N - assumed 'N' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant O - assumed 'O' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant P - assumed 'P' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant Q - assumed 'Q' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant R - assumed 'R' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant S - assumed 'S' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant T - assumed 'T' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant U - assumed 'U' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant V - assumed 'V' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant W - assumed 'W' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant X - assumed 'X' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant Y - assumed 'Y' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant al - assumed 'al' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+NOTIC: [8] Use of undefined constant Z - assumed 'Z' D:\wamp\wamp64\www\jiimarket\Application\Admin\Model\BrandModel.class.php 第 122 行.
+SQL: SELECT `id`,`name`,`logo_src`,`first_char` FROM `jii_brand`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001221s ]
+
+[ 2018-04-08T17:21:46+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/listCart?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001256s ]
+SQL: SHOW COLUMNS FROM `jii_cart` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jii_cart` WHERE `user_id` = '3'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jii_goods_number` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jii_goods_attr` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001021s ]
+
+[ 2018-04-08T17:21:46+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/listCart?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001289s ]
+SQL: SHOW COLUMNS FROM `jii_cart` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jii_cart` WHERE `user_id` = '3'  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jii_goods_number` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jii_goods_attr` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2018-04-08T17:21:47+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/orderState?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001344s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jii_order` WHERE `user_id` = '3'  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001085s ]
+
+[ 2018-04-08T17:21:47+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/orderState?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jii_order` WHERE `user_id` = '3'  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001549s ]
+
+[ 2018-04-08T17:21:49+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/addressList?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `jii_address` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jii_address` WHERE `user_id` = '3'  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001255s ]
+
+[ 2018-04-08T17:21:49+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/addressList?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001159s ]
+SQL: SHOW COLUMNS FROM `jii_address` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jii_address` WHERE `user_id` = '3'  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2018-04-08T17:21:51+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/orderState?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jii_order` WHERE `user_id` = '3'  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2018-04-08T17:21:53+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/userOrder?userKey=eett996738drpada98t1gsfrd4&status=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0007s ]
+SQL: SELECT * FROM jii_order a WHERE `user_id` = '3' AND `status` = '3'  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jii_order_goods` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jii_goods_number` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jii_goods_attr` [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000916s ]
+
+[ 2018-04-08T17:21:54+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/orderState?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001233s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001503s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jii_order` WHERE `user_id` = '3'  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001602s ]
+
+[ 2018-04-08T17:39:13+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/orderState?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001702s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jii_order` WHERE `user_id` = '3'  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000873s ]
+
+[ 2018-04-08T17:39:17+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/orderState?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jii_order` WHERE `user_id` = '3'  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000890s ]
+
+[ 2018-04-08T17:39:33+08:00 ] 127.0.0.1 /jiiMarket/index.php/home/index/goodsDetail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001150s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.shop_price,a.tag,b.id as brand_id,b.name as brand_name,c.id as cat_id,c.name as cat_name FROM jii_goods a LEFT JOIN jii_brand b ON b.id=a.brand_id
+                LEFT JOIN jii_category c ON c.id=a.cat_id  WHERE a.id = '1'  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jii_goods_img` [ RunTime:0.0009s ]
+SQL: SELECT `img_src` FROM `jii_goods_img` WHERE `goods_id` = '1'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jii_goods_desc` [ RunTime:0.0015s ]
+SQL: SELECT `img_src` FROM `jii_goods_desc` WHERE `goods_id` = '1'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jii_goods_attr` [ RunTime:0.0014s ]
+SQL: SELECT a.*,b.attr_name,b.attr_type FROM jii_goods_attr a LEFT JOIN jii_attribute b ON a.attr_id=b.id  WHERE `goods_id` = '1'  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jii_goods_number` [ RunTime:0.0014s ]
+SQL: SELECT `goods_attr_id`,`goods_price`,`goods_number`,`img_src` FROM `jii_goods_number` WHERE `goods_id` = '1' AND `goods_number` > '0'  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001393s ]
+
+[ 2018-04-08T17:40:11+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/orderState?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jii_order` WHERE `user_id` = '3'  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000983s ]
+
+[ 2018-04-08T17:45:19+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/listCart?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001538s ]
+SQL: SHOW COLUMNS FROM `jii_cart` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jii_cart` WHERE `user_id` = '3'  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jii_goods_number` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jii_goods_attr` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jii_goods` [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2018-04-08T17:45:19+08:00 ] 127.0.0.1 /jiiMarket/index.php/Home/index/orderState?userKey=eett996738drpada98t1gsfrd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `jii_order` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jii_order` WHERE `user_id` = '3'  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
